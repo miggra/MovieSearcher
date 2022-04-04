@@ -1,0 +1,95 @@
+#search-bar-container{
+    width: 100%;
+
+    #header-middle-line{
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: space-between;
+        gap: 10px 30px;
+        #main-header-container{
+            order: 1;
+            #main-header{
+                font-family: 'Montserrat-ExtraBold';
+                font-style: normal;
+                font-weight: 800;
+                font-size: 48px;
+                line-height: 59px;
+                align-items: center;
+
+                margin: 0;
+        
+                color: #FFFFFF;
+            }
+        }        
+        .search-bar{
+            order: 2;
+            flex-grow: 2;
+            min-width: 200px;
+            height: 50px;
+            background: #FFFFFF;
+            border-radius: 8px;
+            
+            margin: 0;
+        }
+        #ending-phrase-container{
+            order: 3;
+            #ending-phrase{
+                font-family: 'Montserrat-Black';
+                font-style: normal;
+                font-weight: 900;
+                font-size: 40px;
+                line-height: 49px;
+                text-align: right;
+                
+                margin: 0;
+                
+                color: #FFFFFF;
+            }
+        }
+        // @media (max-width:767px) {
+        //     .container{
+        //         max-width: none;
+        //     }
+        // }
+    }   
+    #header-top-line{
+        #explanation-phrase-container{
+            position: relative;
+            left: 66.10%;
+        }
+    }
+    #header-bottom-line{
+        #explanation-phrase-container{
+            position: relative;
+            left: 17.17%;
+        }
+    } 
+            
+    #explanation-phrase-container{
+        display: flex;
+        align-items: center;
+        width: 300px;
+        height: 50px;
+        .explanation-phrase{
+            font-family: 'Montserrat-Medium';
+            font-style: normal;
+            font-weight: 500;
+            font-size: 32px;
+            line-height: 39px;
+            text-align: center;
+                        
+            margin: 0;            
+            color: #4ECE4C;        
+        } 
+    }
+    @media (max-width:992px) {
+        #ending-phrase-container{
+            display: none;
+        }
+        #explanation-phrase-container{
+            display: none;
+        }
+    }   
+}
