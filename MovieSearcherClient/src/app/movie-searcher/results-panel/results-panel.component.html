@@ -1,1 +1,27 @@
-<p>results-panel works!</p>
+<div id="results-container">
+    <div id="header-wrapper">
+        <p id="results-header">Search Results</p>
+    </div> 
+    <div id="movie-cards-container">
+        <app-movie-card *ngFor="let movieCard of shownMovieCards"
+         [movieCard]="movieCard">
+        </app-movie-card>       
+    </div>
+    <div id="control-buttons-panel">
+        <button *ngIf = "!pageIsFirst"
+            id="previous-button" 
+            mat-raised-button 
+            color="primary"
+            (click)="onGoPreviousPage()">
+            Previous
+        </button>
+        <button *ngIf = "!pageIsLast"
+            id="next-button" 
+            mat-raised-button
+            color="primary"
+            (click)="onGoNextPage()">
+            Next
+        </button>
+    </div>      
+    <div id="page-label"></div>
+</div>

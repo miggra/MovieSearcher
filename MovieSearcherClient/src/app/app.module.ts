@@ -6,6 +6,7 @@ import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MovieSearcherModule } from './movie-searcher/movie-searcher.module';
 import { LogoComponent } from './logo/logo.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { LogoComponent } from './logo/logo.component';
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    MovieSearcherModule
+    MovieSearcherModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

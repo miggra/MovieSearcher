@@ -7,13 +7,21 @@ header {
     background: #9922AC;
     height: 100%;
     .container {
+        display: flex;
+        flex-flow: column;
         width: 100%;
         max-width: 1195px;
         padding: 0px 15px;
         margin: 0 auto;
         background: #9922AC;
         height: 100%;
+
+        app-results-panel{            
+            margin-top: 70px;
+            margin-bottom: 100px;
+            flex: 1 1 auto;
         }
+    }
 
     @media (max-width:1200px) {
         .container{
