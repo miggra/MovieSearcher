@@ -31,9 +31,9 @@ export class ResultsPanelComponent implements OnInit {
         .subscribe(searchResult => 
           {
             this.searchResult = searchResult
-            if (searchResult.response == 'true')
+            if (searchResult.response.toLocaleLowerCase() == 'true')
             {
-              this.movieCards = searchResult.moivesPreviews;
+              this.movieCards = searchResult.movies;
             }
           });
 

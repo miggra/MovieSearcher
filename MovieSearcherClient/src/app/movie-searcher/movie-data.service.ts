@@ -24,16 +24,16 @@ export class MovieDataService {
     return this.http.get<SearchResult>(requestUrl)
     .pipe(
       map(response => {
-        // let moviesPreviews: MovieCard[] = response.moivesPreviews.map(mp => 
-        //   ({
-        //     title: mp.title,
-        //     year: mp.year,
-        //     imageSource: mp.poster,
-        //     type: mp.type,
-        //     id: mp.imdbID
-        //   }));
+        let movies: MovieCard[] = response.movies.map(mp => 
+          new MovieCard(
+            mp.title,
+            mp.year,            
+            mp.imdbId,
+            mp.type,
+            mp.poster
+          ));
         return new SearchResult(
-          response.moivesPreviews,
+          movies,
           response.totalResults,
           response.response,
           response.error 
